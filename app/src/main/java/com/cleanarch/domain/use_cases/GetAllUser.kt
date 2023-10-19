@@ -6,5 +6,5 @@ import javax.inject.Inject
 class GetAllUser @Inject constructor(
     val repo: MainRepo
 ) {
-    operator fun invoke() = repo.getAllUser()
+    suspend operator fun invoke() = repo.getAllUser()
 }

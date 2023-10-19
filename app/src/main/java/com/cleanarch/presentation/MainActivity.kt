@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.cleanarch.domain.model.User
 import com.cleanarch.ui.theme.CleanArchTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,8 +28,17 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting("Android")
                     val viewModel = hiltViewModel<MainViewModel>()
-                    viewModel.getUser()
-                    viewModel.getAllUser()
+                    viewModel.addUser(User(
+                        id = 0,
+                        name = "Carey Wise",
+                        email = "shirley.silva@example.com"
+                    ))
+//                    viewModel.getUser(){
+//
+//                    }
+                    viewModel.getAllUser(){
+
+                    }
                 }
             }
         }

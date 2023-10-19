@@ -4,5 +4,6 @@ import javax.inject.Inject
 
 data class MainUseCases @Inject constructor(
     val getUser: GetUser,
-    val getAllUser: GetAllUser
+    val getAllUser: GetAllUser,
+    val addUser: AddUser
 )
